@@ -1,125 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Survey Form</title>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-    }
-    body {
-      width: 100%;
-      height: 100vh;
-      background-color: #0d99e8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    h1 {
-      color: white;
-      margin-bottom: 10px;
-      font-size: 34px;
-    }
-    .content {
-      width: 400px;
-      background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 18px;
-      padding: 30px;
-    }
-    .a {
-      width: 100%;
-      height: 30px;
-      margin: 10px 0;
-    }
-    .select {
-      width: 100%;
-      height: 30px;
-    }
-    
-    #submit {
-      width: 100px;
-      height: 30px;
-      background-color: #0d99e8;
-      color: white;
-      border: none;
-    }
-    #reset {
-      width: 100px;
-      height: 30px;
-      background-color: red;
-      color: white;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>Customer Survey Form</h1>
-  <div class="content">
-    <form id="surveyForm">
-      <label for="firstName">First Name</label>
-      <input class="a" type="text" id="firstName" required />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #0d99e8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: 34px;
+      }
+      .content {
+        width: 400px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.562) 0px 3px 18px;
+        padding: 20px;
+      }
+      .inputs {
+        width: 45%;
+        height: 30px;
+        margin: 5px 0;
+      }
+      .a {
+        width: 90%;
+        height: 30px;
+        margin: 5px 0;
+      }
+      #ln {
+        margin-left: 127px;
+      }
+      #lastName {
+        margin-left: 10px;
+      }
+      .select {
+        width: 100%;
+        height: 30px;
+      }
+      #country {
+        width: 92%;
+      }
 
-      <label for="lastName">Last Name</label>
-      <input class="a" type="text" id="lastName" required />
+      #submit {
+        width: 100px;
+        height: 30px;
+        background-color: #0d99e8;
+        color: white;
+        border: none;
+      }
+      #reset {
+        width: 100px;
+        height: 30px;
+        background-color: red;
+        color: white;
+        border: none;
+      }
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Customer Survey Form</h1>
+    <div class="content">
+      <form id="surveyForm">
+        <label for="firstName">First Name</label>
+        <label for="lastName" id="ln">Last Name</label><br />
+        <input class="inputs" type="text" id="firstName" required />
+        <input class="inputs" type="text" id="lastName" required />
 
-      <label for="dob">Date of Birth</label>
-      <input class="a" type="date" id="dob" required />
+        <table>
+          <tr>
+            <td><label for="dob">Date of Birth </label></td>
+            <td><input class="a" type="date" id="dob" required /> <br /></td>
+          </tr>
 
-      <label for="country">Country</label>
-      <select class="select" id="country" required>
-        <option value="">Select a country</option>
-        <option value="India">India</option>
-        <option value="USA">USA</option>
-      </select>
+          <tr>
+            <td><label for="country">Country</label></td>
+            <td>
+              <select class="select" id="country" required>
+                <option value="">Select a country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+              </select>
+            </td>
+          </tr>
 
-      <label>Gender</label>
-      <div class="radio-group">
-        <input type="radio" id="male" name="gender" value="Male" required />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="Female" required />
-        <label for="female">Female</label>
-      </div>
+          <tr>
+            <td><label>Gender</label></td>
+            <td>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+                required
+                style="margin: 5px"
+              />
+              <label for="male">Male</label
+              ><span style="padding-left: 10px"></span>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="Female"
+                required
+              />
+              <label for="female">Female</label>
+            </td>
+          </tr>
 
-      <label for="profession">Profession</label>
-      <input class="a" type="text" id="profession" required />
+          <tr>
+            <td><label for="profession">Profession</label></td>
+            <td><input class="a" type="text" id="profession" required /></td>
+          </tr>
 
-      <label for="email">Email</label>
-      <input class="a" type="email" id="email" required />
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td><input class="a" type="email" id="email" required /></td>
+          </tr>
 
-      <label for="mobile">Mobile Number</label>
-      <input class="a" type="tel" id="mobile" required />
+          <tr>
+            <td><label for="mobile">Mobile Number</label></td>
+            <td><input class="a" type="tel" id="mobile" required /></td>
+          </tr>
+        </table>
 
-      <button type="submit" id="submit">Submit</button>
-      <button type="reset" id="reset">Reset</button>
-    </form>
-  </div>
+        <center>
+          <button type="submit" id="submit">Submit</button>
+          <button type="reset" id="reset">Reset</button>
+        </center>
+      </form>
+    </div>
 
-  <script>
-    const form = document.getElementById("surveyForm");
+    <script>
+      const form = document.getElementById("surveyForm");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-      const firstName = document.getElementById("firstName").value;
-      const lastName = document.getElementById("lastName").value;
-      const dob = document.getElementById("dob").value;
-      const country = document.getElementById("country").value;
-      const gender = document.querySelector('input[name="gender"]:checked').value;
-      const profession = document.getElementById("profession").value;
-      const email = document.getElementById("email").value;
-      const mobile = document.getElementById("mobile").value;
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const dob = document.getElementById("dob").value;
+        const country = document.getElementById("country").value;
+        const gender = document.querySelector(
+          'input[name="gender"]:checked'
+        ).value;
+        const profession = document.getElementById("profession").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
 
-      const popup = `First Name: ${firstName}\nLast Name: ${lastName}\nDate of Birth: ${dob}\nCountry: ${country}\nGender: ${gender}\nProfession: ${profession}\nEmail: ${email}\nMobile Number: ${mobile}`;
+        const popup = `First Name: ${firstName}\nLast Name: ${lastName}\nDate of Birth: ${dob}\nCountry: ${country}\nGender: ${gender}\nProfession: ${profession}\nEmail: ${email}\nMobile Number: ${mobile}`;
 
-      alert(popup);
+        alert(popup);
 
-      form.reset();
-    });
-  </script>
-</body>
+        form.reset();
+      });
+    </script>
+  </body>
 </html>
