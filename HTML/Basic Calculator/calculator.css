@@ -33,7 +33,7 @@ button {
 }
 
 button:hover {
-  background-color: #aaa;
+  background-color: #020202ce;
 }
 
 #result {
@@ -62,4 +62,7 @@ button:hover {
 .symbols {
   background-color: #757575;
   color: #fff;
+}
+.symbols:hover {
+  background-color: #7575759a;
 }
